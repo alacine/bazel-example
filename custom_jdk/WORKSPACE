@@ -1,0 +1,70 @@
+load("@bazel_tools//tools/jdk:remote_java_repository.bzl", "remote_java_repository")
+
+# prefix 和 version 拼接对应了 .bazelrc 里面的参数的值
+remote_java_repository(
+    name = "openjdk11_linux",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    prefix = "openjdk",
+    sha256 = "99be79935354f5c0df1ad293620ea36d13f48ec3ea870c838f20c504c9668b57",
+    strip_prefix = "jdk-11.0.2",
+    urls = [
+        "https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz",
+    ],
+    version = "11",
+)
+
+register_toolchains("//tools:default_java_toolchain_definition")
+
+remote_java_repository(
+    name = "openjdk15_linux",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    prefix = "openjdk",
+    sha256 = "bb67cadee687d7b486583d03c9850342afea4593be4f436044d785fba9508fb7",
+    strip_prefix = "jdk-15",
+    urls = [
+        "https://download.java.net/java/GA/jdk15/779bf45e88a44cbd9ea6621d33e33db1/36/GPL/openjdk-15_linux-x64_bin.tar.gz",
+    ],
+    version = "15",
+)
+
+register_toolchains("//tools:java15_toolchain_definition")
+
+remote_java_repository(
+    name = "openjdk17_linux",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    prefix = "openjdk",
+    sha256 = "aef49cc7aa606de2044302e757fa94c8e144818e93487081c4fd319ca858134b",
+    strip_prefix = "jdk-17",
+    urls = [
+        "https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz",
+    ],
+    version = "17",
+)
+
+register_toolchains("//tools:java17_toolchain_definition")
+
+remote_java_repository(
+    name = "openjdk18_linux",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    prefix = "openjdk",
+    sha256 = "0f60aef7b8504983d6e374fe94d09a7bedcf05ec559e812d801a33bd4ebd23d0",
+    strip_prefix = "jdk-18",
+    urls = [
+        "https://download.java.net/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d/36/GPL/openjdk-18_linux-x64_bin.tar.gz",
+    ],
+    version = "18",
+)
+
+register_toolchains("//tools:java18_toolchain_definition")

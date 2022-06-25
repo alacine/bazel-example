@@ -1,0 +1,19 @@
+build:java11 --java_language_version=11
+build:java11 --java_runtime_version=openjdk_11
+build:java11 --tool_java_language_version=11
+build:java11 --tool_java_runtime_version=openjdk_11
+
+build:java15 --java_language_version=15
+build:java15 --java_runtime_version=openjdk_15
+build:java15 --tool_java_language_version=15
+build:java15 --tool_java_runtime_version=openjdk_15
+
+build:java17 --java_language_version=17
+build:java17 --java_runtime_version=openjdk_17
+build:java17 --tool_java_language_version=17
+build:java17 --tool_java_runtime_version=openjdk_17
+
+build:java18 --java_language_version=18
+build:java18 --java_runtime_version=openjdk_18
+build:java18 --tool_java_language_version=18
+build:java18 --tool_java_runtime_version=openjdk_18
